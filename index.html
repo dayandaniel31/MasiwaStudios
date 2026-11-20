@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Des prompts en français pour créer ta landing page, ta boutique, ton portfolio ou ton site vitrine.">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>PromptStudio — Prompts pour sites web</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600..800&amp;family=DM+Sans:wght@400..800&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="store.js" defer></script>
+</head>
+<body id="accueil">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#accueil">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>Masiwa<span class="brand-accent">Studio</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#guide">Comment ça marche</a>
+      </nav>
+      <button class="cart-toggle" id="ouvrir-panier" type="button" aria-haspopup="dialog">
+        <span class="cart-icon" aria-hidden="true"></span> Panier <span id="nombre">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="wrap hero" aria-labelledby="hero-titre">
+      <div class="hero-copy">
+        <p class="eyebrow">Prompts pour sites web</p>
+        <h1 id="hero-titre">Des prompts.<br><em>De vrais sites.</em></h1>
+        <p class="hero-description">Donne à ton IA un brief prêt à personnaliser pour créer une landing page, une boutique ou un portfolio à ton image.</p>
+        <a class="btn btn-primary" href="#catalogue">Explorer le catalogue</a>
+      </div>
+      <figure class="hero-visual" aria-hidden="true">
+        <div class="hero-browser">
+          <div class="browser-bar"><span class="browser-dots"></span><span class="browser-url">atelier.example</span></div>
+          <div class="browser-content">
+            <div class="browser-brand">ATELIER.</div>
+            <div class="browser-headline">Façonner<br>l’ordinaire.</div>
+            <span class="browser-button">Nos projets</span>
+            <div class="browser-art"></div>
+          </div>
+        </div>
+        <div class="hero-terminal">
+          <div class="terminal-bar"><span class="terminal-symbol">›_</span> prompt-vitrine.txt</div>
+          <p>Crée un site vitrine pour <b>[activité]</b> à <b>[ville]</b>. Prévois une section services et un formulaire de devis.</p>
+        </div>
+        <span class="hero-sparkle">✳</span>
+      </figure>
+    </section>
+
+    <section class="wrap catalog" id="catalogue" aria-labelledby="catalogue-titre">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Le catalogue</p>
+          <h2 id="catalogue-titre">Choisis ton prochain projet.</h2>
+        </div>
+        <p id="mode-demo" class="catalog-note">Produits et prix de démonstration</p>
+      </div>
+      <div class="toolbar">
+        <div class="filters" id="filtres" role="group" aria-label="Filtrer par catégorie"></div>
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true"></span>
+          <label class="sr-only" for="recherche">Rechercher un prompt</label>
+          <input id="recherche" type="search" placeholder="Rechercher un prompt" autocomplete="off">
+        </div>
+      </div>
+      <p class="result-count" id="resultats" role="status"></p>
+      <div class="product-grid" id="produits"></div>
+      <noscript>Active JavaScript pour afficher le catalogue et utiliser le panier.</noscript>
+    </section>
+
+    <section class="wrap guide" id="guide" aria-labelledby="guide-titre">
+      <div>
+        <p class="eyebrow">Comment ça marche</p>
+        <h2 id="guide-titre">Du prompt au site.</h2>
+      </div>
+      <div class="guide-items">
+        <details>
+          <summary>Qu’est-ce que j’achète ?</summary>
+          <p>Le texte d’un prompt en français. Il sert de brief pour générer et personnaliser un site avec ton outil d’IA.</p>
+        </details>
+        <details>
+          <summary>Comment personnaliser un prompt ?</summary>
+          <p>Copie le texte dans ton outil d’IA. Remplace ensuite les éléments entre crochets par les informations de ton projet, comme ton activité, ton public ou tes couleurs.</p>
+        </details>
+        <details>
+          <summary>Quel prompt choisir pour mon projet ?</summary>
+          <p>Choisis une landing page pour présenter une offre, un prompt e-commerce pour vendre des produits, un portfolio pour montrer tes réalisations ou un site vitrine pour présenter tes services.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#accueil">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>Prompt<span class="brand-accent">Studio</span></span>
+      </a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#guide">Aide</a>
+    </div>
+  </footer>
+
+  <dialog id="fenetre" aria-labelledby="titre-fenetre">
+    <form class="dialog-top" method="dialog">
+      <button class="btn btn-outline" type="submit" autofocus>Fermer</button>
+    </form>
+    <div id="panneau"></div>
+  </dialog>
+  <p class="sr-only" role="status" id="statut"></p>
+</body>
+</html>
